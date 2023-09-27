@@ -19,9 +19,13 @@ public class EighthAlbumMain {
         PatrickVegee.put(11, "Simple Simple Anecdote");
         PatrickVegee.put(12, "101回目のプロローグ");
 
-        for(int i = 1; i < 13; i++)
-            System.out.println(PatrickVegee.get(i));
-
-        System.out.println(PatrickVegee.get(13));
+        for (int i = 1; i < 14; i++) {
+            try {
+                System.out.println(PatrickVegee.get(i));
+            } catch(NullPointerException e) {
+                System.out.println("存在しない曲を選んでいます");
+                System.out.println("再生を停止します");
+            }
+        }
     }
 }
